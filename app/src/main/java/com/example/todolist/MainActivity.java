@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         items = FileHelper.readData(this);
 
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items);
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,
+                android.R.id.text1 ,items);
         itemList.setAdapter(adapter);
 
         btn.setOnClickListener(this);
